@@ -7,16 +7,16 @@
 // default constructor
 CC1101::CC1101()
 {
-	SPI.begin();
-#ifdef ESP8266
-	pinMode(SS, OUTPUT);
-#endif
 #ifdef WT32ETH01
 	pinMode(SS, OUTPUT);
 	pinMode(MOSI, OUTPUT);
 	pinMode(MISO, INPUT);
 	pinMode(SCK, OUTPUT);
 	pinMode(GPIO39, INPUT);
+#endif
+	SPI.begin();
+#ifdef ESP8266
+	pinMode(SS, OUTPUT);
 #endif
 } //CC1101
 
