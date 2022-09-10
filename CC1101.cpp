@@ -7,7 +7,6 @@
 // default constructor
 CC1101::CC1101()
 {
-	SPI.pins();
 	SPI.begin();
 #ifdef ESP8266
 	pinMode(SS, OUTPUT);
