@@ -42,11 +42,13 @@ void CC1101::spi_waitMiso()
 
 void CC1101::init()
 {
+	ESP_LOGD("custom", "CC1101::init() 1");
 	reset();
 }
 
 void CC1101::reset()
 {
+	ESP_LOGD("custom", "CC1101::reset() 1");
 	deselect();
 	delayMicroseconds(5);
 	select();
@@ -60,6 +62,7 @@ void CC1101::reset()
 	delay(10);
 	spi_waitMiso();
 	deselect();
+		ESP_LOGD("custom", "CC1101::reset() 2");
 }
 
 uint8_t CC1101::writeCommand(uint8_t command)
