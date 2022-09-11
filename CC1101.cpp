@@ -8,6 +8,7 @@
 CC1101::CC1101()
 {
 #ifdef WT32ETH01
+	ESP_LOGD("custom", "CC1101::CC1101");
 	pinMode(SS, OUTPUT);
 	pinMode(MOSI, OUTPUT);
 	pinMode(MISO, INPUT);
